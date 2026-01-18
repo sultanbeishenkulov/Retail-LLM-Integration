@@ -59,6 +59,17 @@ This project demonstrates how to build a conversational chatbot using GooglePalm
 
 2. Interact with the chatbot through the command line interface or integrate it into your application.
 
+
+## System Architecture
+User Interface: Streamlit app for natural language input.
+
+Semantic Layer: LangChain orchestrator that uses ChromaDB to find the most relevant "Few-Shot" SQL examples.
+
+LLM Logic: GooglePaLM processes the prompt + context to generate a syntax-correct MySQL query.
+
+Data Layer: MySQL database executes the query and returns real-time inventory/sales data.
+
+
 ## Configuration
 
 - I stored all my API key in JSON file (keys.json) as well as local MySQL credentials.
